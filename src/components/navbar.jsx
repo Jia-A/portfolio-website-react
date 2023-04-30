@@ -20,17 +20,17 @@ const Navbar=()=> {
         </ul>
       
       <div onClick={handleNav} className='md:hidden z-10 cursor-pointer'>
-        {!bar ? <FaBars/> : <FaTimes/>}
+        {!bar ? <FaBars/> : <FaTimes className='text-[#F9F9F9]'/>}
       </div>
       
-      <ul className={!bar ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center'}>
+      <ul className={!bar ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#1a1919DE] text-[#F9F9F9]'}>
           <li className='py-6 text-4xl px-4 cursor-pointer'>Home</li>
           <li className='py-6 text-4xl px-4 cursor-pointer'>Work</li>
           <li className='py-6 text-4xl px-4 cursor-pointer'>Blogs</li>
           <li className='py-6 text-4xl px-4 cursor-pointer'>Contact</li>
       </ul>
 
-      <div className='hidden lg:flex fixed flex-col top-[40%] left-0 '>
+      <div className='hidden md:flex fixed flex-col top-[40%] left-0 '>
         <ul>
           <li className='w-[160px] h-[40px] flex justify-between items-center ml-[-105px] hover:ml-[-10px] duration-300 '>
             <a href="https://www.linkedin.com/in/jiyaagrawal/" className='flex justify-around items-center w-full font-semibold '> LinkedIn <FaLinkedin size={20}/>
