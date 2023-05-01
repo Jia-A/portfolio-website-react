@@ -1,8 +1,8 @@
-import Store from "./assets/store.png"
-import Shoonya from "./assets/shoonya.png"
-import Notes from "./assets/notes.png"
-import Pomodoro from "./assets/pomodoro.png"
-import Techtonic from "./assets/techtonic.png"
+import Store from "./assets/store.jpg"
+import Shoonya from "./assets/shoonya.jpg"
+import Notes from "./assets/notes.jpg"
+import Pomodoro from "./assets/pomodoro.jpg"
+import Techtonic from "./assets/techtonic.jpg"
 
 export const projects = [
     {
