@@ -6,7 +6,7 @@ import {projects} from '../projectData'
 
 function Projects() {
   return (
-    <div name="projects" className='w-full md:h-full bg-[#F9F9F9]' >
+    <div name="projects" className='w-full md:h-screen bg-[#F9F9F9]' >
         <div className='flex flex-col justify-center w-full h-full max-w-[1000px] mx-auto px-10 lg:px-20'>
             <div className=''>
                     <p className='inline hover:animate-bounce text-3xl sm:text-5xl text-[#1a1919] border-b-2 border-[#464343] font-light py-3'>Projects</p>
@@ -17,14 +17,14 @@ function Projects() {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once:false, amount:0.3}}
-                className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-5'>
+                className='grid gap-y-6 gap-x-10 sm:grid grid-cols-2 md:grid-cols-3 md:gap-x-20 mb-4'>
                     {
                         projects.map((item)=>(
-                            <div className='group flex flex-col relative hover:scale-110 transition-all duration-500 text-[#F9F9F9] rounded'>
-                                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-500 rounded'>   
+                            <div className='group flex flex-col relative hover:scale-110 transition-all duration-500 text-[#F9F9F9] rounded cursor-pointer'>
+                                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-500 rounded-lg'>   
                                 </div>
-                                <img src={item.src} alt="" className='rounded' />
-                                <div className='invisible group-hover:visible absolute left-6 bottom-5 transition-all duration-500 z-50'>
+                                <img src={item.src} alt="" className='rounded-lg' />
+                                <div className='invisible group-hover:visible absolute right-4 bottom-5 transition-all duration-500 z-50'>
                                     <p className='text-2xl'>{item.title}</p>
                                     <p className='text-[12px]'>{item.desc}</p>
                                 </div> 

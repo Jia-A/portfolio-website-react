@@ -1,22 +1,40 @@
 import React, {useState} from 'react' 
 import { FaBars, FaGithub, FaLinkedin, FaTimes} from "react-icons/fa"
 import { BsFillPersonLinesFill } from "react-icons/bs"
+import { Link } from 'react-scroll'
 
 const Navbar=()=> {
  const [bar, setBar] = useState(false)
  const handleNav = () => setBar(!bar)
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-[#1a1919]'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-[#1a1919] bg-[rgba(0,0,0,0.1)] border-b border-[#1a1919]'>
       <div>
     hello
       </div>
       
         <ul className='hidden md:flex'>
-          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b-2 border-[#1a1919]'>Home</li>
-          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b-2 border-[#1a1919]'>Work</li>
-          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b-2 border-[#1a1919]'>Blogs</li>
-          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b-2 border-[#1a1919]'>Contact</li>
+          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b border-[#1a1919] text-[#464343]'>
+            <Link to="hero" smooth={true} duration={500}>
+            Home
+            </Link>
+          </li>
+          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b border-[#1a1919] text-[#464343]'>
+            <Link to="skills" smooth={true} duration={500}>
+            Skills
+            </Link>
+          </li>
+          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b border-[#1a1919] text-[#464343]'>
+            <Link to="projects" smooth={true} duration={500}>
+            Work
+            </Link>
+          </li>
+          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b border-[#1a1919] text-[#464343]'>
+            <Link to="blogs" smooth={true} duration={500}>
+            Blogs
+            </Link>
+          </li>
+          <li className='px-4 cursor-pointer font-medium hover:font-bold hover:border-b border-[#1a1919] text-[#464343]'>Contact</li>
         </ul>
       
       <div onClick={handleNav} className='md:hidden z-10 cursor-pointer'>
@@ -24,9 +42,25 @@ const Navbar=()=> {
       </div>
       
       <ul className={!bar ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#1a1919DE] text-[#F9F9F9]'}>
-          <li className='py-6 text-4xl px-4 cursor-pointer'>Home</li>
-          <li className='py-6 text-4xl px-4 cursor-pointer'>Work</li>
-          <li className='py-6 text-4xl px-4 cursor-pointer'>Blogs</li>
+          <li className='py-6 text-4xl px-4 cursor-pointer'>
+            <Link onClick={handleNav} to="hero" smooth={true} duration={500}>
+            Home
+            </Link></li>
+          <li className='py-6 text-4xl px-4 cursor-pointer'>
+          <Link onClick={handleNav} to="skills" smooth={true} duration={500}>
+            Skills
+            </Link>
+          </li>
+          <li className='py-6 text-4xl px-4 cursor-pointer'>
+          <Link onClick={handleNav} to="projects" smooth={true} duration={500}>
+            Work
+            </Link>
+          </li>
+          <li className='py-6 text-4xl px-4 cursor-pointer'>
+          <Link onClick={handleNav} to="blogs" smooth={true} duration={500}>
+            Blogs
+            </Link>
+          </li>
           <li className='py-6 text-4xl px-4 cursor-pointer'>Contact</li>
       </ul>
 
