@@ -19,7 +19,7 @@ function Hero() {
         </h2>
         <p className='max-w-[650px] py-4 text-[#464343]'>I'm a frontend developer working towards providing smooth UI experience to users by making optimized and responsive websites with excellent performance.</p>
         <div>
-          <button className='flex items-center gap-1 p-2 bg-[rgba(0,0,0,0.1)] hover:border-b-2 border-[#1a1919]'>Projects <HiArrowNarrowRight/></button>
+          <button className='flex items-center gap-1 p-2 bg-[rgba(0,0,0,0.1)] hover:border-b border-[#1a1919]'>Projects <HiArrowNarrowRight/></button>
         </div>
         
       </div>
