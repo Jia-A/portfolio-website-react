@@ -9,7 +9,7 @@ function Skills() {
         <div className='flex flex-col justify-center h-full max-w-[1000px] mx-auto px-10 lg:px-20'>
             <div className=''>
                 <p className='inline text-3xl sm:text-5xl text-[#1a1919] border-b-2 border-[#464343] font-light py-3'>Skills</p>
-                <p className='py-8'>These are the technologies I've worked with</p>
+                <p className='py-8 text-[14px] sm:text-[16px]'>These are the technologies that I've worked with to create user friendly websites.</p>
             </div>
             <motion.div 
                 variants={fadeIn("left, 0.2")}

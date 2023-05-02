@@ -7,7 +7,7 @@ function Contact() {
         <div className='flex flex-col justify-center w-full h-full max-w-[1000px] mx-auto px-10 lg:px-20'>
             <div className=''>
                     <p className='inline hover:animate-bounce text-3xl sm:text-5xl text-[#1a1919] border-b-2 border-[#464343] font-light py-3'>Contact</p>
-                    <p className='py-8'>You can contact me here</p>
+                    <p className='py-8 text-[14px] sm:text-[16px]'>Contact me here</p>
             </div>
             <div className='grid md:grid-cols-2 gap-10 pb-10'>
                 <form action="https://getform.io/f/aca6ee8e-5f67-4750-84ed-4db5b868fdeb" method="POST" className='flex flex-col gap-2'>
