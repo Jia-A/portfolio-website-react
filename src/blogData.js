@@ -1,23 +1,23 @@
 export const blogs = [
     {
         title : "Confusing parts of JS",
-        desc : "This blog explains the little concepts of JavaScript which has a very big impact on your output. I will thoroughly explain null, undefined, undeclared, NaN == vs ===.",
-        link : ""
+        desc : "In this blog I will thoroughly explain null, undefined, undeclared, NaN == vs ===.",
+        link : "https://jiya-blogs.hashnode.dev/confusing-concepts-of-javascript"
     },
     {
         title : "Array iteration in JS",
-        desc : "In this blog I have described various functions which you can use to iterate through arrays. It has many predefined function which you can use to get the required value from an array",
-        link : ""
+        desc : "In this blog I have described various functions which you can use to iterate through arrays.",
+        link : "https://jiya-blogs.hashnode.dev/lets-iterate-an-array-in-js"
     },
     {
         title : "Why semantic HTML",
-        desc : "In this blog, I have explained why writing semantic HTML is more important and has very many advantages over normal HTML.",
-        link : ""
+        desc : "In this blog, I have explained why writing semantic HTML is more important and its advantages.",
+        link : "https://jiya-blogs.hashnode.dev/html-with-meaning"
     },
     {
         title : "My handbook on CSS selectors",
-        desc : "This blog has the easiest explaination about most commonly used CSS Selectors.",
-        link : ""
+        desc : "This blog has the easiest explaination about most commonly used CSS selectors.",
+        link : "https://jiya-blogs.hashnode.dev/my-handbook-on-css-selectors"
     },
     
     
