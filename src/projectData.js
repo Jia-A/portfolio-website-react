@@ -9,30 +9,30 @@ export const projects = [
         title : "Dot Store",
         desc : "An E-commerce wesbite",
         src : Store,
-        link : ""
+        link : "https://dot-store-react.netlify.app/"
     },
     {
         title : "Shoonya",
         desc : "A video library",
         src : Shoonya,
-        link : ""
+        link : "https://shoonya-cosmos.netlify.app/"
     },
     {
         title : "Dot notes",
         desc : "A note taking website",
         src : Notes,
-        link : ""
+        link : "https://dot-note.netlify.app/"
     },
     {
         title : "Dot on Time",
         desc : "A pomodoro app",
         src : Pomodoro,
-        link : ""
+        link : "https://dot-on-time.netlify.app/"
     },
     {
         title : "Techtonic UI",
         desc : "A CSS component library",
         src : Techtonic,
-        link : ""
+        link : "https://techtonic-ui.netlify.app/"
     }
 ]
