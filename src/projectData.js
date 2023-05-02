@@ -19,19 +19,19 @@ export const projects = [
     },
     {
         title : "Dot notes",
-        desc : "A note taking website",
+        desc : "Note taker",
         src : Notes,
         link : "https://dot-note.netlify.app/"
     },
     {
-        title : "Dot on Time",
-        desc : "A pomodoro app",
+        title : "DotOnTime",
+        desc : "Pomodoro app",
         src : Pomodoro,
         link : "https://dot-on-time.netlify.app/"
     },
     {
-        title : "Techtonic UI",
-        desc : "A CSS component library",
+        title : "TechtonicUI",
+        desc : "Component library",
         src : Techtonic,
         link : "https://techtonic-ui.netlify.app/"
     }

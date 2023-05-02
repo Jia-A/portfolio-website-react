@@ -28,8 +28,8 @@ function Projects() {
                                 </div>
                                 <img src={item.src} alt="" className='rounded-lg' />
                                 <div className='invisible group-hover:visible absolute right-4 bottom-5 transition-all duration-500 z-50'>
-                                    <p className='text-2xl'>{item.title}</p>
-                                    <p className='text-[12px]'>{item.desc}</p>
+                                    <p className='text-[18px] md:text-2xl'>{item.title}</p>
+                                    <p className='text-[8px] md:text-[12px]'>{item.desc}</p>
                                     
                                     
                                 </div> 
