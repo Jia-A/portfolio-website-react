@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from "../variants"
 import {projects} from '../projectData'
+import { Link } from "react-router-dom"
 
 
 function Projects() {
@@ -20,15 +21,21 @@ function Projects() {
                 className='grid gap-y-6 gap-x-10 sm:grid grid-cols-2 md:grid-cols-3 md:gap-x-20 mb-4'>
                     {
                         projects.map((item)=>(
+                            
                             <div className='group flex flex-col relative hover:scale-110 transition-all duration-500 text-[#F9F9F9] rounded cursor-pointer'>
+                                <Link to={item.link}>
                                 <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-500 rounded-lg'>   
                                 </div>
                                 <img src={item.src} alt="" className='rounded-lg' />
                                 <div className='invisible group-hover:visible absolute right-4 bottom-5 transition-all duration-500 z-50'>
                                     <p className='text-2xl'>{item.title}</p>
                                     <p className='text-[12px]'>{item.desc}</p>
+                                    
+                                    
                                 </div> 
+                                </Link>
                             </div>
+                           
                         ))
                     }
                 

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { blogs } from '../blogData'
+import { Link } from 'react-router-dom'
 
 function Blogs() {
   return (
@@ -24,7 +25,9 @@ function Blogs() {
                                 <p className='border-t border-[#1a1919]  text-2xl'>{item.title}</p>
                                 <small className=' max-w-full p-1'>{item.desc}</small>
                                 <p className=' text-[15px] self-end'>
+                                    <Link to={item.link}>
                                     <button className='flex flex-row gap-2 items-center hover:animate-ping '>Read <HiArrowNarrowRight/></button>
+                                    </Link>
                                 </p>
                             </div>
                         ))
