@@ -7,13 +7,13 @@ import Techtonic from "./assets/techtonic.jpg"
 export const projects = [
     {
         title : "Dot Store",
-        desc : "An E-commerce wesbite",
+        desc : "E-commerce website",
         src : Store,
         link : "https://dot-store-react.netlify.app/"
     },
     {
         title : "Shoonya",
-        desc : "A video library",
+        desc : "Video library",
         src : Shoonya,
         link : "https://shoonya-cosmos.netlify.app/"
     },
