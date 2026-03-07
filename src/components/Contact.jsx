@@ -19,7 +19,6 @@ function Contact() {
                 <div>
                     <p className='text-2xl'>Mail me at</p>
                     <p className='inline border-b border-[#1a1919]'>agrawaljiya2011@gmail.com</p>
-                    <p className='pt-5'>Call me at : <span className='text-[18px] border-b border-[#1a1919]'> 8269659518</span></p>
                 </div>
             </div>
         </div> 

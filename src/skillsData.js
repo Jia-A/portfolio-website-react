@@ -1,39 +1,130 @@
-import HTML from "./assets/html.png"
-import ReactLogo from "./assets/react.png"
-import CSS from "./assets/css.png"
-import JS from "./assets/javascript.png"
-import Github  from "./assets/github.png"
-import Tailwind from "./assets/tailwind.png"
+import {
+    FaReact,
+    FaJs,
+    FaHtml5,
+    FaCss3Alt,
+    FaGithub,
+    FaGitAlt,
+    FaFigma,
+    FaNodeJs
+} from 'react-icons/fa';
+import {
+    SiTypescript,
+    SiNextdotjs,
+    SiTailwindcss,
+    SiMui,
+    SiRedux,
+    SiBitbucket,
+    SiJira,
+    SiPostman,
+    SiSwagger,
+    SiNetlify,
+    SiVercel,
+    SiPrisma,
+    SiNodedotjs,
+    SiPostgresql,
+    SiCloudflare,
+    SiExpress
+} from 'react-icons/si';
 
 export const skills = [
     {
-        title : "ReactJS",
-        src : ReactLogo,
-        alt : "react-logo"
+        title: "React",
+        icon: <FaReact />
     },
     {
-        title : "JavaScript",
-        src : JS,
-        alt : "javascript-logo"
+        title: "Next.js",
+        icon: <SiNextdotjs />
     },
     {
-        title : "HTML5",
-        src : HTML,
-        alt : "html-logo"
+        title: "TypeScript", 
+        icon: <SiTypescript />
     },
     {
-        title : "CSS3",
-        src : CSS,
-        alt : "css-logo"
+        title: "JavaScript",
+        icon: <FaJs />
     },
     {
-        title : "Tailwind CSS",
-        src : Tailwind,
-        alt : "tailwind-logo"
+        title: "HTML5",
+        icon: <FaHtml5 />
     },
     {
-        title : "GitHub",
-        src : Github,
-        alt : "github-logo"
+        title: "CSS3",
+        icon: <FaCss3Alt />
     },
-]
+    {
+        title: "Tailwind CSS",
+        icon: <SiTailwindcss />
+    },
+    {
+        title: "Material UI",
+        icon: <SiMui />
+    },
+    {
+        title: "Redux",
+        icon: <SiRedux />
+    },
+    {
+        title: "Git",
+        icon: <FaGitAlt />
+    },
+    {
+        title: "GitHub",
+        icon: <FaGithub />
+    },
+    {
+        title: "Bitbucket",
+        icon: <SiBitbucket />
+    },
+    {
+        title: "Figma",
+        icon: <FaFigma />
+    },
+    {
+        title: "Jira",
+        icon: <SiJira />
+    },
+    {
+        title: "Postman",
+        icon: <SiPostman />
+    },
+    {
+        title: "Swagger",
+        icon: <SiSwagger />
+    },
+    {
+        title: "Netlify",
+        icon: <SiNetlify />
+    },
+    {
+        title: "Vercel",
+        icon: <SiVercel />
+    }
+];
+
+export const currentLearning = [
+    {
+        title: "Prisma",
+        icon: <SiPrisma />
+    },
+    {
+        title: "Node.js",
+        icon: <SiNodedotjs />
+    },
+    {
+        title: "PostgreSQL",
+        icon: <SiPostgresql />
+    },
+    {
+        title: "Cloudflare",
+        icon: <SiCloudflare />
+    },
+    {
+        title: "Express",
+        icon: <SiExpress />
+    },
+    {
+        title: "Hono",
+        icon: <div className="font-bold text-lg border-2 border-current rounded px-1">H</div>
+    }
+];

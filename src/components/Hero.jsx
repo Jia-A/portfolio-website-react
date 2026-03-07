@@ -5,7 +5,7 @@ import { Link } from "react-scroll"
 
 function Hero() {
   let [text] = useTypewriter({
-    words : ['FrontEnd Developer'],
+    words : ['Senior Frontend Developer'],
     loop : {},
     typeSpeed : 120,
     deleteSpeed : 80
@@ -18,7 +18,7 @@ function Hero() {
         <h2 className='text-3xl sm:text-5xl font-bold text-[#464343]'>I'm a {" "} 
           <span style={{color: "#1a1919", fontWeight:"bolder"}}> {text}<Cursor/></span>
         </h2>
-        <p className='max-w-[650px] py-4 text-[#464343]'>I'm a frontend developer working towards providing smooth UI experience to users by making optimized and responsive websites with excellent performance.</p>
+        <p className='max-w-[650px] py-4 text-[#464343]'>I build high-performance web applications with server-side rendering, API integration, and optimal SEO using modern React frameworks.</p>
         <div>
           <Link to='projects' smooth={true} duration={500}>
           <button className='flex items-center gap-1 p-2 bg-[rgba(0,0,0,0.1)] hover:border-b border-[#1a1919]'>Projects <HiArrowNarrowRight/></button>

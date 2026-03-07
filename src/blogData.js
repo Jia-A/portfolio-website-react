@@ -1,5 +1,15 @@
 export const blogs = [
     {
+        title : 'Promise Hacks Out, queueMicrotask() In',
+        desc : "In this blog, I have explained the new microtask queue and how it is different from the promise queue.",
+        link : "https://jiya-blogs.hashnode.dev/promise-hacks-out-queuemicrotask-in"
+    },
+    {
+        title : 'You’re Using TypeScript Wrong Without These Utilities',
+        desc : "In this blog, I have explained some of the most useful utility types in TypeScript and how to use them.",
+        link : "https://jiya-blogs.hashnode.dev/typescript-hidden-utilities"
+    },
+    {
         title : "Confusing parts of JS",
         desc : "In this blog I will thoroughly explain null, undefined, undeclared, NaN == vs ===.",
         link : "https://jiya-blogs.hashnode.dev/confusing-concepts-of-javascript"
