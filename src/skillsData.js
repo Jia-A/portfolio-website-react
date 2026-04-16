@@ -5,8 +5,7 @@ import {
     FaCss3Alt,
     FaGithub,
     FaGitAlt,
-    FaFigma,
-    FaNodeJs
+    FaFigma
 } from 'react-icons/fa';
 import {
     SiTypescript,
