@@ -59,10 +59,10 @@ export const skills = [
         title: "Material UI",
         icon: <SiMui />
     },
-    {
-        title: "Redux",
-        icon: <SiRedux />
-    },
+    // {
+    //     title: "Redux",
+    //     icon: <SiRedux />
+    // },
     {
         title: "Git",
         icon: <FaGitAlt />
