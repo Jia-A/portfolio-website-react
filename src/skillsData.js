@@ -12,7 +12,6 @@ import {
     SiNextdotjs,
     SiTailwindcss,
     SiMui,
-    SiRedux,
     SiBitbucket,
     SiJira,
     SiPostman,
