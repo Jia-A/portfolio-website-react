@@ -22,17 +22,15 @@ function Projects() {
                     {
                         projects.map((item)=>(
                             
-                            <div className='group flex flex-col relative hover:scale-110 transition-all duration-500 text-[#F9F9F9] rounded cursor-pointer'>
+                            <div className='group flex flex-col relative md:hover:scale-110 transition-all duration-500 text-[#F9F9F9] rounded cursor-pointer'>
                                 <Link to={item.link}>
-                                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-500 rounded-lg'>   
+                                <div className='bg-gradient-to-t from-black/80 via-black/40 to-transparent md:from-transparent md:via-transparent md:to-transparent md:group-hover:bg-black/70 md:bg-gradient-to-t w-full h-full absolute z-40 transition-all duration-500 rounded-lg'>
                                 </div>
-                                <img src={item.src} alt="" className='rounded-lg' />
-                                <div className='invisible group-hover:visible absolute right-4 bottom-5 transition-all duration-500 z-50'>
-                                    <p className='text-[18px] md:text-2xl'>{item.title}</p>
-                                    <p className='text-[10px] md:text-[12px]'>{item.desc}</p>
-                                    
-                                    
-                                </div> 
+                                <img src={item.src} alt="" className='rounded-lg w-full' />
+                                <div className='absolute right-4 bottom-3 md:bottom-5 md:invisible md:group-hover:visible transition-all duration-500 z-50 text-right'>
+                                    <p className='text-[14px] sm:text-[16px] md:text-2xl font-medium'>{item.title}</p>
+                                    <p className='text-[10px] md:text-[12px] hidden md:block'>{item.desc}</p>
+                                </div>
                                 </Link>
                             </div>
                            
