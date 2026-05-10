@@ -72,6 +72,12 @@ const Navbar=()=> {
             Contact
             </Link>
           </li>
+          <li className='flex gap-8 pt-10'>
+            <a href="https://www.linkedin.com/in/jiyaagrawal/" aria-label="LinkedIn"><FaLinkedin size={32}/></a>
+            <a href="https://github.com/Jia-A" aria-label="GitHub"><FaGithub size={32}/></a>
+            <a href="https://drive.google.com/file/d/1g_TRCYQfmfGjvO-yC_wJJ3ktxffNGOsw/view?usp=sharing" aria-label="Resume"><BsFillPersonLinesFill size={32}/></a>
+            <a href="https://jiya-blogs.hashnode.dev/" aria-label="Hashnode"><MdOutlineArticle size={32}/></a>
+          </li>
       </ul>
 
       <div className='hidden md:flex fixed flex-col top-[32%] left-0 '>
