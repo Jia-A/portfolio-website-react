@@ -43,7 +43,7 @@ function Blogs() {
                     {item.desc}
                   </p>
                 </div>
-                <HiArrowNarrowRight className="shrink-0 text-fog transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent" />
+                <HiArrowNarrowRight className="shrink-0 text-bone transition-all duration-300 md:text-fog md:group-hover:translate-x-1 md:group-hover:text-accent" />
               </a>
             </li>
           ))}

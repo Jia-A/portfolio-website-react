@@ -52,7 +52,7 @@ function Experience() {
                       className="flex gap-3 text-sm leading-relaxed text-fog"
                     >
                       <span className="mt-2 h-px w-3 shrink-0 bg-accent" />
-                      <span className="transition-colors group-hover:text-bone">
+                      <span className="text-bone transition-colors md:text-fog md:group-hover:text-bone">
                         {h}
                       </span>
                     </li>

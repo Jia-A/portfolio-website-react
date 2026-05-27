@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
 const navItems = [
@@ -15,9 +15,44 @@ const navItems = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  // Lock page scroll while the mobile menu is open.
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-line bg-ink/80 backdrop-blur-md">
-      <div className="mx-auto flex h-[68px] max-w-[1100px] items-center justify-between px-6 lg:px-10">
+    <>
+      {/* Mobile overlay — top-level so it escapes the header's blur/stacking context */}
+      <div
+        className={`fixed inset-0 z-40 bg-ink transition-[opacity,visibility] duration-300 md:hidden ${
+          open ? "visible opacity-100" : "invisible opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col gap-2 px-6 pt-28 font-mono uppercase tracking-[0.15em]">
+          {navItems.map((item, i) => (
+            <li key={item.to} className="border-b border-line">
+              <Link
+                to={item.to}
+                smooth
+                duration={500}
+                onClick={() => setOpen(false)}
+                className="flex items-baseline gap-3 py-5 text-2xl text-bone"
+              >
+                <span className="text-sm text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <header className="fixed top-0 z-50 w-full border-b border-line bg-ink/80 backdrop-blur-md">
+        <div className="mx-auto flex h-[68px] max-w-[1100px] items-center justify-between px-6 lg:px-10">
         <Link
           to="hero"
           smooth
@@ -61,34 +96,9 @@ const Navbar = () => {
             className={`h-px w-6 bg-bone transition-transform ${open ? "-translate-y-[6px] -rotate-45" : ""}`}
           />
         </button>
-      </div>
-
-      {/* Mobile overlay */}
-      <div
-        className={`fixed inset-0 top-[68px] bg-ink transition-[opacity,visibility] duration-300 md:hidden ${
-          open ? "visible opacity-100" : "invisible opacity-0"
-        }`}
-      >
-        <ul className="flex flex-col gap-2 px-6 pt-10 font-mono uppercase tracking-[0.15em]">
-          {navItems.map((item, i) => (
-            <li key={item.to} className="border-b border-line">
-              <Link
-                to={item.to}
-                smooth
-                duration={500}
-                onClick={() => setOpen(false)}
-                className="flex items-baseline gap-3 py-5 text-2xl text-bone"
-              >
-                <span className="text-sm text-accent">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   );
 };
 

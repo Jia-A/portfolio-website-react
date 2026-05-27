@@ -38,10 +38,10 @@ function Projects() {
                   src={item.src}
                   alt={item.title}
                   fill
-                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  className="object-cover transition-all duration-500 md:grayscale md:group-hover:grayscale-0"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-ink/40 transition-opacity duration-500 group-hover:opacity-0" />
+                <div className="absolute inset-0 transition-opacity duration-500 md:bg-ink/40 md:group-hover:opacity-0" />
               </div>
 
               <div className="flex items-start justify-between gap-3 p-5">
@@ -54,7 +54,7 @@ function Projects() {
                   </h3>
                   <p className="mt-1 font-mono text-xs text-fog">{item.desc}</p>
                 </div>
-                <HiArrowNarrowRight className="mt-1 shrink-0 -rotate-45 text-fog transition-all duration-300 group-hover:rotate-0 group-hover:text-accent" />
+                <HiArrowNarrowRight className="mt-1 shrink-0 -rotate-45 text-accent transition-all duration-300 md:text-fog md:group-hover:rotate-0 md:group-hover:text-accent" />
               </div>
             </a>
           ))}

@@ -28,10 +28,10 @@ function Skills() {
               data-cursor="hover"
               className="group flex aspect-square flex-col items-center justify-center gap-3 border-b border-r border-line transition-colors hover:bg-surface"
             >
-              <div className="text-3xl text-fog transition-colors duration-300 group-hover:text-accent">
+              <div className="text-3xl text-bone transition-colors duration-300 md:text-fog md:group-hover:text-accent">
                 {item.icon}
               </div>
-              <small className="font-mono text-[11px] uppercase tracking-wider text-fog transition-colors group-hover:text-bone">
+              <small className="font-mono text-[11px] uppercase tracking-wider text-bone transition-colors md:text-fog md:group-hover:text-bone">
                 {item.title}
               </small>
             </div>
@@ -58,10 +58,10 @@ function Skills() {
                 data-cursor="hover"
                 className="group inline-flex items-center gap-2.5 border border-line px-4 py-2.5 transition-colors hover:border-accent"
               >
-                <span className="text-lg text-fog transition-colors group-hover:text-accent">
+                <span className="text-lg text-bone transition-colors md:text-fog md:group-hover:text-accent">
                   {item.icon}
                 </span>
-                <span className="font-mono text-xs uppercase tracking-wider text-fog transition-colors group-hover:text-bone">
+                <span className="font-mono text-xs uppercase tracking-wider text-bone transition-colors md:text-fog md:group-hover:text-bone">
                   {item.title}
                 </span>
               </div>
