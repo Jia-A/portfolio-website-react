@@ -1,11 +1,15 @@
 function Footer() {
   return (
-    <div className="text-center bg-[#F9F9F9] py-5 border-t mx-2 border-[#1a1919]">
-      <p className="text-[12px] md:text-[16px] inline border-x p-2 border-[#1a1919]">
-        Made with Next.js - TailwindCSS - Framer-motion
-      </p>
-      <p className="text-[12px] md:text-[15px]">© | 2026 | jiyaagrawal</p>
-    </div>
+    <footer className="w-full border-t border-line py-10">
+      <div className="mx-auto flex max-w-[1100px] flex-col items-center justify-between gap-3 px-6 font-mono text-[11px] uppercase tracking-[0.2em] text-fog sm:flex-row lg:px-10">
+        <p>
+          Built with Next.js · Tailwind · Framer Motion
+        </p>
+        <p>
+          © 2026 <span className="text-bone">Jiya Agrawal</span>
+        </p>
+      </div>
+    </footer>
   );
 }
 

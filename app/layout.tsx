@@ -1,19 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Raleway } from "next/font/google";
+import { Raleway, JetBrains_Mono } from "next/font/google";
+import Cursor from "@/components/Cursor";
 import "./globals.css";
 
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   display: "swap",
+  variable: "--font-raleway",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://jiyaagrawal.netlify.app";
 
-const title = "Jiya Agrawal | Developer";
+const title = "Jiya Agrawal | Frontend Engineer";
 const description =
-  "Portfolio of Jiya Agrawal — Senior Frontend Developer building high-performance web applications.";
+  "Frontend Engineer specialising in React & Next.js — building scalable B2B & B2C commerce platforms with a focus on performance and AI-era SEO.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,7 +46,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Jiya Agrawal — Senior Frontend Developer",
+        alt: "Jiya Agrawal — Frontend Engineer",
       },
     ],
   },
@@ -50,7 +59,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#0a0a0a",
 };
 
 export default function RootLayout({
@@ -59,8 +68,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={raleway.className}>
-      <body className="scrollbar-thin scrollbar-thumb-[#1a1919] scrollbar-track-[#777272]">
+    <html
+      lang="en"
+      className={`${raleway.variable} ${mono.variable} cursor-none-fine`}
+    >
+      <body className="bg-ink font-sans text-bone scrollbar-thin scrollbar-thumb-line scrollbar-track-ink">
+        <Cursor />
         {children}
       </body>
     </html>

@@ -6,41 +6,65 @@ import { Link } from "react-scroll";
 
 function Hero() {
   const [text] = useTypewriter({
-    words: ["Senior Frontend Developer"],
+    words: [
+      "Frontend Engineer",
+      "React & Next.js Specialist",
+      "Performance & SEO Engineer",
+    ],
     loop: 0,
-    typeSpeed: 120,
-    deleteSpeed: 80,
+    typeSpeed: 90,
+    deleteSpeed: 50,
+    delaySpeed: 1800,
   });
+
   return (
-    <div id="hero" className="w-full h-screen bg-[#F9F9F9]">
-      <div className="flex flex-col justify-center h-full max-w-[1000px] mx-auto px-10 lg:px-20">
-        <p className="text-2xl sm:text-3xl font-bold text-[#464343] px-2">
-          Hi, my name is
+    <section
+      id="hero"
+      className="bg-grid relative flex min-h-screen w-full items-center"
+    >
+      <div className="mx-auto w-full max-w-[1100px] px-6 lg:px-10">
+        <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-accent">
+          // hi, my name is
         </p>
-        <h1 className="text-3xl sm:text-5xl font-bold text-[#1a1919]">
-          Jiya Agrawal
+
+        <h1 className="text-5xl font-bold uppercase leading-[0.95] tracking-tight text-bone sm:text-7xl lg:text-8xl">
+          Jiya
+          <br />
+          Agrawal
         </h1>
-        <h2 className="text-3xl sm:text-5xl font-bold text-[#464343]">
-          I&apos;m a{" "}
-          <span style={{ color: "#1a1919", fontWeight: "bolder" }}>
-            {" "}
-            {text}
-            <Cursor />
-          </span>
-        </h2>
-        <p className="max-w-[650px] py-4 text-[#464343]">
-          I build high-performance web applications with server-side rendering,
-          API integration, and optimal SEO using modern React frameworks.
+
+        <div className="mt-6 flex items-center gap-3 font-mono text-lg text-fog sm:text-2xl">
+          <span className="text-accent">{">"}</span>
+          <span className="text-bone">{text}</span>
+          <Cursor cursorColor="#ff5436" />
+        </div>
+
+        <p className="mt-8 max-w-[560px] text-sm leading-relaxed text-fog sm:text-base">
+          Frontend Engineer specialising in React and Next.js, with production
+          experience building scalable B2B &amp; B2C commerce platforms for
+          Australian companies. Focused on performance engineering, AI-era SEO,
+          and composable architecture — building towards full-stack ownership.
         </p>
-        <div>
-          <Link to="projects" smooth={true} duration={500}>
-            <button className="flex items-center gap-1 p-2 bg-[rgba(0,0,0,0.1)] hover:border-b border-[#1a1919]">
-              Projects <HiArrowNarrowRight />
+
+        <div className="mt-10 flex flex-wrap gap-4">
+          <Link to="projects" smooth duration={500}>
+            <button className="group inline-flex items-center gap-2 border border-accent px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-accent transition-colors hover:bg-accent hover:text-ink">
+              View Work
+              <HiArrowNarrowRight className="transition-transform group-hover:translate-x-1" />
+            </button>
+          </Link>
+          <Link to="contact" smooth duration={500}>
+            <button className="inline-flex items-center gap-2 border border-line px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-fog transition-colors hover:border-bone hover:text-bone">
+              Get in touch
             </button>
           </Link>
         </div>
       </div>
-    </div>
+
+      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-fog md:block">
+        scroll ↓
+      </div>
+    </section>
   );
 }
 

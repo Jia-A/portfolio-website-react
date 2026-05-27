@@ -2,52 +2,65 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { HiArrowNarrowRight } from "react-icons/hi";
 import { fadeIn } from "./variants";
 import { projects } from "./projectData";
+import SectionHeading from "./SectionHeading";
 
 function Projects() {
   return (
-    <div id="projects" className="w-full md:h-screen bg-[#F9F9F9]">
-      <div className="flex flex-col justify-center w-full h-full max-w-[1000px] mx-auto px-10 lg:px-20">
-        <div>
-          <p className="inline hover:animate-bounce text-3xl sm:text-5xl text-[#1a1919] border-b-2 border-[#464343] font-light py-3">
-            Projects
-          </p>
-          <p className="py-8 text-[14px] sm:text-[16px]">
-            These are some of the projects I&apos;ve created. All of these are
-            made for a single purpose which is providing even a small service
-            with high quality performance.{" "}
-          </p>
-        </div>
+    <section id="projects" className="w-full border-t border-line py-28">
+      <div className="mx-auto max-w-[1100px] px-6 lg:px-10">
+        <SectionHeading
+          index="03"
+          title="Work"
+          intro="Selected projects, each built to deliver a focused service with high-quality, performant execution."
+        />
+
         <motion.div
-          variants={fadeIn("left", 0.2)}
+          variants={fadeIn("up", 0.2)}
           initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="grid gap-y-6 gap-x-10 sm:grid grid-cols-2 md:grid-cols-3 md:gap-x-20 mb-4"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3"
         >
-          {projects.map((item) => (
-            <div
+          {projects.map((item, i) => (
+            <a
               key={item.title}
-              className="group flex flex-col relative md:hover:scale-110 transition-all duration-500 text-[#F9F9F9] rounded cursor-pointer"
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="hover"
+              className="group relative flex flex-col bg-ink transition-colors hover:bg-surface"
             >
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <div className="bg-gradient-to-t from-black/80 via-black/40 to-transparent md:from-transparent md:via-transparent md:to-transparent md:group-hover:bg-black/70 md:bg-gradient-to-t w-full h-full absolute z-40 transition-all duration-500 rounded-lg"></div>
-                <Image src={item.src} alt={item.title} className="rounded-lg w-full h-auto" />
-                <div className="absolute right-4 bottom-3 md:bottom-5 md:invisible md:group-hover:visible transition-all duration-500 z-50 text-right">
-                  <p className="text-[14px] sm:text-[16px] md:text-2xl font-medium">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-ink/40 transition-opacity duration-500 group-hover:opacity-0" />
+              </div>
+
+              <div className="flex items-start justify-between gap-3 p-5">
+                <div>
+                  <span className="font-mono text-xs text-accent">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-2 text-lg font-medium uppercase tracking-wide text-bone">
                     {item.title}
-                  </p>
-                  <p className="text-[10px] md:text-[12px] hidden md:block">
-                    {item.desc}
-                  </p>
+                  </h3>
+                  <p className="mt-1 font-mono text-xs text-fog">{item.desc}</p>
                 </div>
-              </a>
-            </div>
+                <HiArrowNarrowRight className="mt-1 shrink-0 -rotate-45 text-fog transition-all duration-300 group-hover:rotate-0 group-hover:text-accent" />
+              </div>
+            </a>
           ))}
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -4,16 +4,16 @@ import { writeFileSync } from "node:fs";
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a1919"/>
-      <stop offset="100%" stop-color="#2b2828"/>
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#161616"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="80" y="120" width="6" height="390" rx="3" fill="#F9F9F9"/>
-  <text x="120" y="210" font-family="Raleway, Helvetica, Arial, sans-serif" font-size="44" font-weight="500" fill="#aca6a6">Hi, I'm</text>
-  <text x="120" y="320" font-family="Raleway, Helvetica, Arial, sans-serif" font-size="104" font-weight="700" fill="#F9F9F9">Jiya Agrawal</text>
-  <text x="120" y="400" font-family="Raleway, Helvetica, Arial, sans-serif" font-size="52" font-weight="600" fill="#cfcaca">Senior Frontend Developer</text>
-  <text x="120" y="500" font-family="Raleway, Helvetica, Arial, sans-serif" font-size="30" font-weight="400" fill="#8f8a8a">React · Next.js · TypeScript · Tailwind</text>
+  <rect x="80" y="130" width="6" height="370" fill="#ff5436"/>
+  <text x="120" y="205" font-family="JetBrains Mono, monospace" font-size="30" letter-spacing="6" font-weight="500" fill="#ff5436">// HI, MY NAME IS</text>
+  <text x="120" y="320" font-family="Raleway, Helvetica, Arial, sans-serif" font-size="110" font-weight="700" letter-spacing="-2" fill="#e5e5e5">JIYA AGRAWAL</text>
+  <text x="120" y="400" font-family="JetBrains Mono, monospace" font-size="40" font-weight="500" fill="#6b6b6b">&gt; <tspan fill="#e5e5e5">Frontend Engineer</tspan></text>
+  <text x="120" y="490" font-family="JetBrains Mono, monospace" font-size="26" letter-spacing="3" font-weight="400" fill="#6b6b6b">REACT · NEXT.JS · TYPESCRIPT · TAILWIND</text>
 </svg>`;
 
 const png = await sharp(Buffer.from(svg)).png().toBuffer();
