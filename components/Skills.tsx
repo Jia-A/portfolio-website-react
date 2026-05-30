@@ -26,9 +26,9 @@ function Skills() {
             <div
               key={item.title}
               data-cursor="hover"
-              className="group flex aspect-square flex-col items-center justify-center gap-3 border-b border-r border-line transition-colors hover:bg-surface"
+              className="group flex h-24 flex-col items-center justify-center gap-2 border-b border-r border-line transition-colors hover:bg-surface sm:aspect-square sm:h-auto sm:gap-3"
             >
-              <div className="text-3xl text-bone transition-colors duration-300 md:text-fog md:group-hover:text-accent">
+              <div className="text-2xl text-bone transition-colors duration-300 sm:text-3xl md:text-fog md:group-hover:text-accent">
                 {item.icon}
               </div>
               <small className="font-mono text-[11px] uppercase tracking-wider text-bone transition-colors md:text-fog md:group-hover:text-bone">
