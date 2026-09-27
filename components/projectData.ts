@@ -37,4 +37,28 @@ export const projects: Project[] = [
       { label: "Hardened", value: "PBKDF2 hashing · AES-256-GCM tokens · HTML sanitized on write & render" },
     ],
   },
+  {
+    title: "Hanko",
+    tagline: "Pull, forge and stamp Japanese seals — right in the browser.",
+    desc: "Drag a box around a seal in any image or PDF and hanko lifts it onto a transparent background. Gemini reads the characters and tells you what kind of seal it is, turns your name into a kanji hanko, and the PDF tool stamps it onto any page.",
+    link: "https://hankostudio.vercel.app/",
+    year: "2026",
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Gemini API",
+      "Sharp",
+      "pdf.js",
+      "pdf-lib",
+      "Canvas",
+      "Tailwind 4",
+    ],
+    highlights: [
+      { label: "Extract", value: "Crop a seal from an image or PDF page, background removed server-side with Sharp" },
+      { label: "AI reading", value: "Gemini reads the characters, translates them and names the seal type" },
+      { label: "Creator", value: "Latin names become kanji, drawn live as a double-ringed hanko on canvas" },
+      { label: "PDF stamping", value: "Drag, size and embed a seal on any page, all client-side with pdf-lib" },
+    ],
+  },
 ];

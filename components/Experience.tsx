@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeIn } from "./variants";
-import { experiences } from "./experienceData";
+import { clients, experiences } from "./experienceData";
 import SectionHeading from "./SectionHeading";
 
 function Experience() {
@@ -73,6 +73,28 @@ function Experience() {
                 )}
               </div>
             </motion.article>
+          ))}
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 gap-px border border-line bg-line lg:grid-cols-4">
+          {clients.map((client) => (
+            <a
+              key={client.name}
+              href={client.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="hover"
+              aria-label={client.name}
+              className="group flex h-24 items-center justify-center bg-ink px-6 transition-colors duration-500 hover:bg-surface"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={client.logo}
+                alt={`${client.name} logo`}
+                loading="lazy"
+                className="max-h-9 max-w-[150px] object-contain opacity-60 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0"
+              />
+            </a>
           ))}
         </div>
 

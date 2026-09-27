@@ -46,3 +46,16 @@ export const experiences: Experience[] = [
     stack: ["React", "React Query", "JavaScript", "GA / GTM", "Storybook"],
   },
 ];
+
+export type Client = {
+  name: string;
+  logo: string;
+  url: string;
+};
+
+export const clients: Client[] = [
+  { name: "Kitchen Warehouse", logo: "/clients/kitchen-warehouse.png", url: "https://www.kitchenwarehouse.com.au/" },
+  { name: "BikeExchange", logo: "/clients/bikeexchange.svg", url: "https://www.bikeexchange.com.au/" },
+  { name: "Hastings Deering", logo: "/clients/hastings-deering.png", url: "https://www.hastingsdeering.com.au/" },
+  { name: "Motion", logo: "/clients/motion.png", url: "https://www.motion.com.au/" },
+];
