@@ -130,7 +130,7 @@ function Contact() {
                   Hashnode ↗
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1g_TRCYQfmfGjvO-yC_wJJ3ktxffNGOsw/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1J5dWUoAU-YFnkQcx0YFsowLN7cR0BSu3/view?usp=sharing"
                   className="text-bone transition-colors hover:text-accent"
                 >
                   Résumé ↗

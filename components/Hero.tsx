@@ -10,6 +10,7 @@ function Hero() {
       "Frontend Engineer",
       "React & Next.js Specialist",
       "Performance & SEO Engineer",
+      "Full-Stack Developer",
     ],
     loop: 0,
     typeSpeed: 90,
@@ -40,10 +41,7 @@ function Hero() {
         </div>
 
         <p className="mt-8 max-w-[560px] text-sm leading-relaxed text-fog sm:text-base">
-          Frontend Engineer specialising in React and Next.js, with production
-          experience building scalable B2B &amp; B2C commerce platforms for
-          Australian companies. Focused on performance engineering, AI-era SEO,
-          and composable architecture — building towards full-stack ownership.
+          I’ve spent 3 years building headless commerce for Australian brands: 500+ reusable components, multi-brand theming, and high-traffic sale launches that couldn’t go down. Next: full-stack products with AI built in.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4">
